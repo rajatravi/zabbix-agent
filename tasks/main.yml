@@ -1,4 +1,9 @@
 --- 
+ - name: Insert an entry in /etc/hosts {{ ansible_hostname }}
+   lineinfile:
+   destfile: /etc/hosts
+   line: '{{ IP }}  monitor.lybrate.com'
+
  - name: Download Zabbix Ubuntu 16 (Xenial) release deb file
     get_url:
       url="http://repo.zabbix.com/zabbix/3.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.2-1+xenial_all.deb"
