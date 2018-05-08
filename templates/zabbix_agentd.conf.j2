@@ -8,6 +8,7 @@ Server={{ zabbix_server_ip }}
 ListenPort=10050
 ListenIP={{ ansible_default_ipv4.address }}
 StartAgents=3
+ServerActive={{ zabbix_server_ip }}
 HostMetadata=linux
 RefreshActiveChecks=120
 BufferSend=5
